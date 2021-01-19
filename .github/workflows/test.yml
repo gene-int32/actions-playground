@@ -22,18 +22,11 @@ jobs:
       - name: Install NodeJS
         uses: actions/setup-node@v2.1.4
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: |
-          echo "::group::My title"
-          node --version
-          echo "::endgroup::"
+      - name: npm init
+        run: npm init -y
       
-      - name: "Current workspace $CI"
-        run: echo ${{ github.repository_owner }}
+      - name: npm i express
+        run: npm i express
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Run node
+        run: node
