@@ -20,6 +20,9 @@ jobs:
       - name: Check NodeJS
         run: node --version
       
+      - name: Check hosts
+        run: cat /etc/hosts
+      
 #       - name: Install NodeJS
 #         uses: actions/setup-node@v2.1.4
 
