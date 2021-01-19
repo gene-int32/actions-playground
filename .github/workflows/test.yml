@@ -8,25 +8,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2.3.4
-
-      - name: Print git
-        run: |
-          cd $GITHUB_WORKSPACE
-          pwd
-          ls -la
-
-#       - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       
-#       - name: Install NodeJS
-#         uses: actions/setup-node@v2.1.4
+      - name: Install NodeJS
+        uses: actions/setup-node@v2.1.4
 
-#       - name: npm init
-#         run: npm init -y
+      - name: Install AVA
+        run: npm i ava
       
-#       - name: npm i express
-#         run: npm i express
-
-#       - name: Run node
-#         run: node
+      - name: Run tests
+        run: npx ava
