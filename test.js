@@ -2,8 +2,7 @@ const test = require('ava');
 const { MongoClient } = require("mongodb");
 
 // Connection URI
-const uri =
-  "mongodb://mongodb:27017";
+const uri = "mongodb://mongodb:27017";
 
 // Create a new MongoClient
 const client = new MongoClient(uri);
