@@ -1,10 +1,8 @@
-// const test = require('ava');
+const test = require('ava');
 const { MongoClient } = require("mongodb");
 
 // Connection URI
 const uri = "mongodb://mongodb:27017";
-
-console.log(uri);
 
 // Create a new MongoClient
 const client = new MongoClient(uri, {
@@ -12,26 +10,14 @@ const client = new MongoClient(uri, {
   useUnifiedTopology: true
 });
 
-async function run() {
-  try {
-    // Connect the client to the server
+test('Should connect to mongodb', async t => {
+  try {  
     await client.connect();
-    // Establish and verify connection
     await client.db("admin").command({ ping: 1 });
-    console.log("Connected successfully to server");
+    t.pass();
+  } catch() {
+    t.fail();
   } finally {
-    // Ensures that the client will close when you finish/error
     await client.close();
   }
-}
-
-run().catch(console.dir);
-
-// test('foo', t => {
-// 	t.pass();
-// });
-
-// test('bar', async t => {
-// 	const bar = Promise.resolve('bar');
-// 	t.is(await bar, 'bar');
-// });
+});
