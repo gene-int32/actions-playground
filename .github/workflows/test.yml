@@ -22,9 +22,6 @@ jobs:
       
       - name: Check hosts
         run: cat /etc/hosts
-      
-#       - name: Install NodeJS
-#         uses: actions/setup-node@v2.1.4
 
       - name: Install AVA
         run: npm i ava
@@ -32,8 +29,5 @@ jobs:
       - name: Install mongodb
         run: npm i mongodb
       
-#       - name: Run tests
-#         run: npx ava
-
-      - name: Run code
-        run: node test.js
+      - name: Run tests
+        run: npx ava
