@@ -8,24 +8,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJSON(github) }}
-        run: echo "$GITHUB_CONTEXT"
-      
-      - name: "Print $GITHUB_WORKSPACE"
-        run: echo $GITHUB_WORKSPACE
-      
-      - name: Install NodeJS
-        uses: actions/setup-node@v2.1.4
+      - name: Print git
+        run: |
+          git --version
+          git status
 
-      - name: npm init
-        run: npm init -y
+#       - uses: actions/checkout@v2
       
-      - name: npm i express
-        run: npm i express
+#       - name: Install NodeJS
+#         uses: actions/setup-node@v2.1.4
 
-      - name: Run node
-        run: node
+#       - name: npm init
+#         run: npm init -y
+      
+#       - name: npm i express
+#         run: npm i express
+
+#       - name: Run node
+#         run: node
