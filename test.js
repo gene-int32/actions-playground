@@ -7,7 +7,10 @@ const uri = "mongodb://mongodb:27017";
 console.log(uri);
 
 // Create a new MongoClient
-const client = new MongoClient(uri);
+const client = new MongoClient(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 async function run() {
   try {
