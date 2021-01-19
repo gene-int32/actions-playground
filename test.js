@@ -15,7 +15,7 @@ test('Should connect to mongodb', async t => {
     await client.connect();
     await client.db("admin").command({ ping: 1 });
     t.pass();
-  } catch() {
+  } catch(err) {
     t.fail();
   } finally {
     await client.close();
