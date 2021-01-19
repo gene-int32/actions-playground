@@ -3,7 +3,7 @@ const { MongoClient } = require("mongodb");
 
 // Connection URI
 const uri =
-  "mongodb+srv://mongodb:27017";
+  "mongodb://mongodb:27017";
 
 // Create a new MongoClient
 const client = new MongoClient(uri);
