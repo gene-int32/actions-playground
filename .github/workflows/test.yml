@@ -32,5 +32,8 @@ jobs:
       - name: Install mongodb
         run: npm i mongodb
       
-      - name: Run tests
-        run: npx ava
+#       - name: Run tests
+#         run: npx ava
+
+      - name: Run code
+        run: node test.js
