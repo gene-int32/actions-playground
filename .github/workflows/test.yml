@@ -19,9 +19,6 @@ jobs:
       
       - name: Check NodeJS
         run: node --version
-      
-      - name: Check hosts
-        run: cat /etc/hosts
 
       - name: Install AVA
         run: npm i ava
