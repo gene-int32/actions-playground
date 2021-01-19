@@ -10,7 +10,7 @@ jobs:
     container: node:latest
     
     services:
-      mongo:
+      mongodb:
         image: mongo
         ports: ['27017:27017']
 
