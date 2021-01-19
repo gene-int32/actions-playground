@@ -10,9 +10,9 @@ jobs:
     steps:
       - name: Print git
         run: |
-          git --version
           cd $GITHUB_WORKSPACE
-          git status
+          pwd
+          ls -la
 
 #       - uses: actions/checkout@v2
       
