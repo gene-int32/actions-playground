@@ -4,6 +4,8 @@ const { MongoClient } = require("mongodb");
 // Connection URI
 const uri = "mongodb://mongodb:27017";
 
+console.log(uri);
+
 // Create a new MongoClient
 const client = new MongoClient(uri);
 
