@@ -1,4 +1,4 @@
-const test = require('ava');
+// const test = require('ava');
 const { MongoClient } = require("mongodb");
 
 // Connection URI
@@ -24,11 +24,11 @@ async function run() {
 
 run().catch(console.dir);
 
-test('foo', t => {
-	t.pass();
-});
+// test('foo', t => {
+// 	t.pass();
+// });
 
-test('bar', async t => {
-	const bar = Promise.resolve('bar');
-	t.is(await bar, 'bar');
-});
+// test('bar', async t => {
+// 	const bar = Promise.resolve('bar');
+// 	t.is(await bar, 'bar');
+// });
