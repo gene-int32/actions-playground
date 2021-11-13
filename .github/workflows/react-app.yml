@@ -21,7 +21,7 @@ jobs:
       run: npx create-react-app dummy-app
       
     - name: Build app
-      run: cd dummy-app && ls -la
+      run: cd dummy-app && yarn build
     
 #     - name: Deploy to GitHub Pages
 #       if: success()
