@@ -11,9 +11,19 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js
-      uses: actions/setup-node@v2
+#     - name: Use Node.js
+#       uses: actions/setup-node@v2
+#       with:
+#         node-version: 17
+        
+    - name: Gen dummy page
+      run: mkdir public && echo "Hello Gene" >> public/index.html
+    
+    - name: Deploy to GitHub Pages
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v2
       with:
-        node-version: 17
-    - run: echo "Hello Gene" >> index.html
-    - run: cat index.html
+        target_branch: gh-pages
+        build_dir: public
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
