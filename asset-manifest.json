@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/actions-playground/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/actions-playground/static/js/main.e411b187.chunk.js",
+    "main.js.map": "/actions-playground/static/js/main.e411b187.chunk.js.map",
+    "runtime-main.js": "/actions-playground/static/js/runtime-main.f2c4d14c.js",
+    "runtime-main.js.map": "/actions-playground/static/js/runtime-main.f2c4d14c.js.map",
+    "static/js/2.ef0845aa.chunk.js": "/actions-playground/static/js/2.ef0845aa.chunk.js",
+    "static/js/2.ef0845aa.chunk.js.map": "/actions-playground/static/js/2.ef0845aa.chunk.js.map",
+    "static/js/3.a01dddb8.chunk.js": "/actions-playground/static/js/3.a01dddb8.chunk.js",
+    "static/js/3.a01dddb8.chunk.js.map": "/actions-playground/static/js/3.a01dddb8.chunk.js.map",
+    "index.html": "/actions-playground/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/actions-playground/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.ef0845aa.chunk.js.LICENSE.txt": "/actions-playground/static/js/2.ef0845aa.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/actions-playground/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f2c4d14c.js",
+    "static/js/2.ef0845aa.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.e411b187.chunk.js"
+  ]
+}
