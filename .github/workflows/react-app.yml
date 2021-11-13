@@ -17,21 +17,18 @@ jobs:
       with:
         node-version: 16
         
-    - name: Create App
+    - name: Create app
       run: npx create-react-app dummy-app
       
     - name: Build app
       run: cd dummy-app && yarn build
       
-    - name: Test dir
-      run: pwd
-    
     - name: Deploy to GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@v2
       with:
         target_branch: gh-pages
-        build_dir: build
+        build_dir: dummy-app/build
         verbose: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
