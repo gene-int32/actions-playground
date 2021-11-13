@@ -21,7 +21,10 @@ jobs:
       run: npx create-react-app dummy-app
       
     - name: Build app
-      run: cd dummy-app && yarn build
+      run: |
+        cd dummy-app
+        export PUBLIC_URL=/actions-playground
+        yarn build
       
     - name: Deploy to GitHub Pages
       if: success()
@@ -29,7 +32,6 @@ jobs:
       with:
         target_branch: gh-pages
         build_dir: dummy-app/build
-        verbose: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
