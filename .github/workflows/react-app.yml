@@ -19,11 +19,12 @@ jobs:
         
     - name: Create app
       run: npx create-react-app dummy-app
-      
+    
     - name: Build app
       run: |
         cd dummy-app
         export PUBLIC_URL=/actions-playground
+        yarn test
         yarn build
       
     - name: Deploy to GitHub Pages
