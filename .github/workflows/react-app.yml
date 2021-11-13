@@ -23,7 +23,7 @@ jobs:
     - name: Build app
       run: |
         cd dummy-app
-        export PUBLIC_URL=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY
+        export PUBLIC_URL=/actions-playground
         yarn build
       
     - name: Deploy to GitHub Pages
